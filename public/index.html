@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Juego equis-cero v1.0, (Tic Tac Toe Game v1.0)">
+    <meta name="author" content="José Luis Olivares">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+    <!-- uikit 3 framework -->
+    <link rel="stylesheet" href="vendor/uikit/css/uikit.min.css" />
+    <script src="vendor/uikit/js/uikit.min.js"></script>
+    <script src="vendor/uikit/js/uikit-icons.min.js"></script> 
+    <!-- Jquery -->
+    <script src="vendor/jquery/jquery-3.3.1.min.js"></script>     
+	<!-- Fontawesome -->
+	<link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+	<!-- socket io 2.0 -->
+	<script src="vendor/socketio/socket.io.js"></script>
+
+    <title>Mi juego X-0 v1, por Jose Luis Olivares</title>
+</head>
+
+<body>
+<div class="uk-container uk-position-top uk-padding-large">
+	<div class="uk-flex uk-flex-center">
+		<div id="divLogin">
+			<div class="uk-grid-small" uk-grid>
+			    <div class="uk-width-1-2">
+				    <div class="uk-margin">
+				        <div class="uk-inline">
+				            <span class="uk-form-icon" uk-icon="icon: user"></span>
+				            <input id="txtUserName" class="uk-input" type="text" required>
+				        </div>
+				    </div>		    	
+			    </div>
+			    <div class="uk-width-1-2">
+				    <div class="uk-margin">
+				        <div class="uk-inline">		    	
+				        	<button id="btnLogin" class="uk-button uk-button-primary"><span uk-icon="sign-in"></span></button>
+				        </div>
+				    </div>    	
+				</div>    		    
+			</div>	
+		</div>	
+	</div>
+	<div class="" id="divVersus"  hidden="true">
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-padding-small"><h3><div id="divMyUser"></div></h3></div>
+			<div class="uk-padding-small"><h3 class="uk-text-danger">Vs</h3></div>
+			<div class="uk-padding-small">
+				<select class="uk-select uk-form-width-small" id="selectVersus" disabled="true">
+	                <option value="0">Select...</option>
+	            </select>
+	        </div>
+	    </div>    
+        <div class="uk-flex uk-flex-center">
+        	<div class="uk-margin">
+        		<button id="btnFight" class="uk-button uk-button-primary uk-button-small" disabled>Jugar<span uk-icon="bolt"></span></button>
+        	</div>
+        </div>
+	</div>
+	
+	<hr class="uk-divider-icon">
+	<div id="gameBoard" class="uk-grid-small uk-grid-match uk-child-width-1-3 uk-flex-center uk-text-center" uk-grid>
+	    <div>
+	    	<button id="p00" class="uk-button uk-button-default uk-button-large uk-card-hover" >
+	    	</button>
+	    </div>
+	    <div>
+	    	<button id="p01" class="uk-button uk-button-default uk-button-large uk-card-hover"     	
+	    	</button>	    	
+	    </div>
+	    <div>
+	    	<button id="p02" class="uk-button uk-button-default uk-button-large uk-card-hover">
+	    	</button>	    	
+	    </div>
+	    <div>
+	    	<button id="p10" class="uk-button uk-button-default uk-button-large uk-card-hover">
+	    	</button>	    	
+	    </div>
+	    <div>
+	    	<button id="p11" class="uk-button uk-button-default uk-button-large uk-card-hover">
+	    	</button>	    	
+	    </div>
+	    <div>
+	    	<button id="p12" class="uk-button uk-button-default uk-button-large uk-card-hover">
+	    	</button>
+	    </div>
+	    <div>
+	    	<button id="p20" class="uk-button uk-button-default uk-button-large uk-card-hover" >
+	    	</button>	    	
+	    </div>
+	    <div>
+	    	<button id="p21" class="uk-button uk-button-default uk-button-large uk-card-hover" >
+	    	</button>
+	    </div>
+	    <div>
+	    	<button id="p22" class="uk-button uk-button-default uk-button-large uk-card-hover">
+	    	</button>
+	    </div>	    
+	</div>
+
+	<div class="uk-text-right" uk-grid>
+	    <div class="uk-width-1-2">
+			<br>
+			<span uk-icon="icon: users"></span>
+			<span class="uk-badge "><div id="usersConnected">0</div></span>			
+	    </div>
+	    <div class="uk-width-1-2">
+	    	<div class="uk-text-right">
+			<button id="btnLogout" class="uk-button uk-button-primary" disabled="true"><span uk-icon="sign-out"></span></button>
+			</div>	    	
+	    </div>
+	</div>
+	<div class="uk-text-left"><br><br> <a href="https://linkedin.com/in/jolivaress" class="uk-link-muted">by José Luis Olivares</a></div>
+</div><!-- close container -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+    	 //Agregamos el listener
+
+
+    </script>
+</body>
+
+</html>

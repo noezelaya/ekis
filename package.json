@@ -1,0 +1,10 @@
+{
+  "name": "EquisCero",
+  "author": "Jose Luis Olivares",
+  "version": "1.0.0",
+  "description": "Juego Equis Cero",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^2.1.1"
+  }
+}
